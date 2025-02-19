@@ -1,15 +1,15 @@
 Retroplanning :
 	Hypothèse : On pose le lundi 30 juin comme la date limite.
 	Hérédité :	[s-0]	30-06-2025	lun	:	date limite
-				[	]	27-06-2025	ven	:	avoir tout terminé
+				[   ]	27-06-2025	ven	:	avoir tout terminé
 				[s-1]	23-07-2025	lun :	on finalise
-				[	]	20-06-2025	ven	:	avoir fini la présentation
+				[   ]	20-06-2025	ven	:	avoir fini la présentation
 				[s-2]	16-06-2025	lun :	commencer à travailler sur la présentation
-				[	]	13-06-2025	ven :	avoir fini le rapport
+				[   ]	13-06-2025	ven :	avoir fini le rapport
 				[s-3]	09-06-2025	lun :	commencer à finaliser le rapport
-				[	]	06-06-2025	ven :	avoir fini le rapport grosso modo (structure, contenu, algo...)
+				[   ]	06-06-2025	ven :	avoir fini le rapport grosso modo (structure, contenu, algo...)
 				[s-5]	26-05-2025	lun	:	le lundi après les examens - se remettre, commencer à travailler sur le rapport
-				[	]	24-05-2025	sam :	[À CONFIRMER] fin des examens finaux
+				[   ]	24-05-2025	sam :	[À CONFIRMER] fin des examens finaux
 				[s-6]	19-05-2025	lun : 	[À CONFIRMER] début des examens finaux
 				[s-7]	12-05-2025	lun :	[À CONFIRMER] official study week
 				[s-8]	05-05-2025	lun :	[À CONFIRMER] study week
@@ -19,4 +19,6 @@ Retroplanning :
 To do:
 	- code
 	- report
+		-	during report: experimentation, jeux de teste
+		-	analysis, does it work, etc...
 	- presentation
