@@ -1,0 +1,2 @@
+https://webia.lip6.fr/~phw/aGrUM/docs/last/notebooks/
+https://pyagrum.readthedocs.io/en/1.17.2/
