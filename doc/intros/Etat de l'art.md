@@ -38,3 +38,5 @@ L'algorithme traditionnel pour resoudre un LIMID (ennumeration des decisions) es
 ## 5. Conclusion 
 ## 6. Références 
 (les articles a ajouter) (is this needed?)
+
+https://docs.google.com/document/d/15OAPzBZ9CiiqbCzqmkgywevDu1jxqOXgZGQ6oIA9gs4/edit?usp=sharing
