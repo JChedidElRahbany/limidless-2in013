@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+
+<BIF VERSION="0.3">
+<NETWORK>
+
+<!-- Variables -->
+<VARIABLE TYPE="nature">
+	<NAME>C1</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = C1{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>C2</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = C2{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>C3</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = C3{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>C4</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = C4{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>C5</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = C5{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>C6</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = C6{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>D1</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = D1{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>D2</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = D2{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>D3</NAME>
+	<PROPERTY>description = </PROPERTY>
+	<PROPERTY>fast = D3{0|1}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+	<OUTCOME>1</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>U1</NAME>
+	<PROPERTY>description = u</PROPERTY>
+	<PROPERTY>fast = U1{0}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>U2</NAME>
+	<PROPERTY>description = u</PROPERTY>
+	<PROPERTY>fast = U2{0}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>U3</NAME>
+	<PROPERTY>description = u</PROPERTY>
+	<PROPERTY>fast = U3{0}</PROPERTY>
+<!- OUTCOME are not used in pyAgrum BIFXML (see fast property) but are kept for compatibility->
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<!-- Probability distributions -->
+<DEFINITION>
+	<FOR>C1</FOR><!--C1 | -->
+	<TABLE>0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>C2</FOR><!--C2 | C1,-->
+	<GIVEN>C1</GIVEN>
+	<TABLE>0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>C3</FOR><!--C3 | D1,C1,-->
+	<GIVEN>D1</GIVEN>
+	<GIVEN>C1</GIVEN>
+	<TABLE>0 0 0 0 0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>C4</FOR><!--C4 | C3,-->
+	<GIVEN>C3</GIVEN>
+	<TABLE>0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>C5</FOR><!--C5 | D2,C3,-->
+	<GIVEN>D2</GIVEN>
+	<GIVEN>C3</GIVEN>
+	<TABLE>0 0 0 0 0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>C6</FOR><!--C6 | C5,-->
+	<GIVEN>C5</GIVEN>
+	<TABLE>0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>D1</FOR><!--D1 | C2,-->
+	<GIVEN>C2</GIVEN>
+</DEFINITION>
+<DEFINITION>
+	<FOR>D2</FOR><!--D2 | C4,C3,-->
+	<GIVEN>C3</GIVEN>
+	<GIVEN>C4</GIVEN>
+</DEFINITION>
+<DEFINITION>
+	<FOR>D3</FOR><!--D3 | C6,-->
+	<GIVEN>C6</GIVEN>
+</DEFINITION>
+<DEFINITION>
+	<FOR>U1</FOR><!--U1 | C2,D1,-->
+	<GIVEN>D1</GIVEN>
+	<GIVEN>C2</GIVEN>
+	<TABLE>0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>U2</FOR><!--U2 | D2,-->
+	<GIVEN>D2</GIVEN>
+	<TABLE>0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>U3</FOR><!--U3 | D3,C5,-->
+	<GIVEN>D3</GIVEN>
+	<GIVEN>C5</GIVEN>
+	<TABLE>0 0 0 0 </TABLE>
+</DEFINITION>
+
+</NETWORK>
+</BIF>
