@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+
+<BIF VERSION="0.3">
+<NETWORK>
+
+<!-- Variables -->
+<VARIABLE TYPE="nature">
+	<NAME>h1</NAME>
+	<PROPERTY>Healthy ith month</PROPERTY>
+	<OUTCOME>healthy</OUTCOME>
+	<OUTCOME>ill</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>h2</NAME>
+	<PROPERTY>Healthy ith month</PROPERTY>
+	<OUTCOME>healthy</OUTCOME>
+	<OUTCOME>ill</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>h3</NAME>
+	<PROPERTY>Healthy ith month</PROPERTY>
+	<OUTCOME>healthy</OUTCOME>
+	<OUTCOME>ill</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>h4</NAME>
+	<PROPERTY>Healthy ith month</PROPERTY>
+	<OUTCOME>healthy</OUTCOME>
+	<OUTCOME>ill</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>t1</NAME>
+	<PROPERTY>Test result at the end of ith month</PROPERTY>
+	<OUTCOME>ill</OUTCOME>
+	<OUTCOME>not ill</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>t2</NAME>
+	<PROPERTY>Test result at the end of ith month</PROPERTY>
+	<OUTCOME>ill</OUTCOME>
+	<OUTCOME>not ill</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>t3</NAME>
+	<PROPERTY>Test result at the end of ith month</PROPERTY>
+	<OUTCOME>ill</OUTCOME>
+	<OUTCOME>not ill</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>d1</NAME>
+	<PROPERTY>give treatment at the end of ith month</PROPERTY>
+	<OUTCOME>give</OUTCOME>
+	<OUTCOME>dont give</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>d2</NAME>
+	<PROPERTY>give treatment at the end of ith month</PROPERTY>
+	<OUTCOME>give</OUTCOME>
+	<OUTCOME>dont give</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>d3</NAME>
+	<PROPERTY>give treatment at the end of ith month</PROPERTY>
+	<OUTCOME>give</OUTCOME>
+	<OUTCOME>dont give</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>u1</NAME>
+	<PROPERTY>price of treatment</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>u2</NAME>
+	<PROPERTY>price of treatment</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>u3</NAME>
+	<PROPERTY>price of treatment</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>u4</NAME>
+	<PROPERTY>price of treatment</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<!-- Probability distributions -->
+<DEFINITION>
+	<FOR>h1</FOR><!--h1 | -->
+	<TABLE>0.9 0.1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>h2</FOR><!--h2 | d1,h1,-->
+	<GIVEN>d1</GIVEN>
+	<GIVEN>h1</GIVEN>
+	<TABLE>0.9 0.1 0.5 0.5 0.8 0.2 0.1 0.9 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>h3</FOR><!--h3 | d2,h2,-->
+	<GIVEN>d2</GIVEN>
+	<GIVEN>h2</GIVEN>
+	<TABLE>0.9 0.1 0.5 0.5 0.8 0.2 0.1 0.9 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>h4</FOR><!--h4 | d3,h3,-->
+	<GIVEN>d3</GIVEN>
+	<GIVEN>h3</GIVEN>
+	<TABLE>0.9 0.1 0.5 0.5 0.8 0.2 0.1 0.9 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>t1</FOR><!--t1 | h1,-->
+	<GIVEN>h1</GIVEN>
+	<TABLE>0.1 0.9 0.8 0.2 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>t2</FOR><!--t2 | h2,-->
+	<GIVEN>h2</GIVEN>
+	<TABLE>0.1 0.9 0.8 0.2 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>t3</FOR><!--t3 | h3,-->
+	<GIVEN>h3</GIVEN>
+	<TABLE>0.1 0.9 0.8 0.2 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>d1</FOR><!--d1 | t1,-->
+	<GIVEN>t1</GIVEN>
+</DEFINITION>
+<DEFINITION>
+	<FOR>d2</FOR><!--d2 | t2,-->
+	<GIVEN>t2</GIVEN>
+</DEFINITION>
+<DEFINITION>
+	<FOR>d3</FOR><!--d3 | t3,-->
+	<GIVEN>t3</GIVEN>
+</DEFINITION>
+<DEFINITION>
+	<FOR>u1</FOR><!--u1 | d1,-->
+	<GIVEN>d1</GIVEN>
+	<TABLE>-100 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>u2</FOR><!--u2 | d2,-->
+	<GIVEN>d2</GIVEN>
+	<TABLE>-100 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>u3</FOR><!--u3 | d3,-->
+	<GIVEN>d3</GIVEN>
+	<TABLE>-100 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>u4</FOR><!--u4 | h4,-->
+	<GIVEN>h4</GIVEN>
+	<TABLE>1000 300 </TABLE>
+</DEFINITION>
+
+</NETWORK>
+</BIF>
